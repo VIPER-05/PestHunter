@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% block content %}
+
+ <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+<source src="{{ url_for('static', filename='vids/gmc.mp4') }}" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<div class="container pt-5">
+  <h1 class="text-center" style="color:#8CE17D ;">Legal Status of GM Crops in India</h1>
+  <p class="text-center pt-3" style="color: white;">This table provides detailed information about the legal status of GM crops in India, including the techniques used, validity dates, and ongoing legal cases.</p>
+</div>
+
+<div class="container" style="z-index: 2; position: relative;">
+  
+  
+  <!-- Table for GM Crops Legal Information -->
+  <table class="table table-bordered" style="margin-top: 30px; background-color: white; color: black;">
+    <thead>
+      <tr style="background-color: #4CAF50; color: white;">
+        <th>Crop Name</th>
+        <th>Technique Used</th>
+        <th>Validity Start Date</th>
+        <th>Ongoing Legal Cases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color: green;">
+        <td>Bt Cotton</td>
+        <td>Gene Splicing, Insertion of Bt Gene</td>
+        <td>2002</td>
+        <td>No major ongoing cases, but ongoing regulatory discussions</td>
+      </tr>
+      <tr style="color: red;">
+        <td>Bt Brinjal</td>
+        <td>Gene Splicing (Insertion of Cry1Ac gene)</td>
+        <td>Pending approval since 2010</td>
+        <td>Pending approval by the GEAC, Public protests, Court cases on safety concerns</td>
+      </tr>
+      <tr style="color: red;">
+        <td>GM Mustard (DMH-11)</td>
+        <td>Gene Splicing (Insertion of bar and pat genes)</td>
+        <td>Pending approval since 2017</td>
+        <td>Public opposition, GEAC review, Court cases related to safety and environmental concerns</td>
+      </tr>
+      <tr style="color: red;">
+        <td>GM Rice (Golden Rice)</td>
+        <td>Gene Splicing (Insertion of Vitamin A producing genes)</td>
+        <td>Research phase, no commercial release</td>
+        <td>Approval pending, ongoing legal scrutiny on environmental and health safety</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+
+<br>
+<br>
+
+<!-- Background Image Section -->
+<div style="background-image: url('{{ url_for('static', filename='images/growing-life-concept-with-flowers.jpg') }}'); 
+             background-size: cover; 
+             background-position: center; 
+             height: 100vh; /* Ensures the background covers the full height of the page */
+             padding: 50px 0; color: white; text-align: center;"> <!-- Set text color to white and center the text -->
+  
+  <div class="container pt-5">
+      <h3 style="text-align: center; text-transform: uppercase; color: white;">
+        Results Of Prediction
+      </h3>
+    <div style="width: 90%; margin: auto;">
+        <h3 style="margin-top: 40px; color: white; font-weight: bold;">
+            Prediction: <span style="color: green">{{ result }}</span>
+        </h3>
+        <br>
+        <br>
+        <div class="prediction">
+          <a href="/" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Back Home</a>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+{% endblock %}

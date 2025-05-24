@@ -1,0 +1,96 @@
+{% extends "index.html" %}
+{% block content %}
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<div class="container pt-5">
+    <h1 class="text-center" style="color: #8CE17D; font-family: 'Kaushan Script', cursive;">Government Schemes for Farmers</h1>
+    <p class="text-center pt-3">
+        Explore various government schemes that provide financial assistance, subsidies, and support for farmers
+        in improving soil health, crop production, and agricultural sustainability.
+    </p>
+</div>
+<br>
+<div class="container">
+    <div class="row d-flex">
+        <!-- PM-KISAN Scheme -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+                <img src="https://pmkisan.gov.in/new_images/WebBanner-1.jpg" class="card-img-top" alt="PM-KISAN">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)</h5>
+                    <p class="card-text">A direct income support scheme where ₹6,000 per year is provided to small and marginal farmers in three equal installments.</p>
+                    <a href="https://pmkisan.gov.in/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soil Health Card Scheme -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+               <img src="{{ url_for('static', filename='images/soilh.png') }}" class="card-img-top" alt="Soil Health Card Scheme">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">Soil Health Card Scheme</h5>
+                    <p class="card-text">Provides farmers with a detailed soil health report along with recommendations for fertilizers and crop selection.</p>
+                    <a href="https://soilhealth.dac.gov.in/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Check Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PMFBY Crop Insurance -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+                <img src="https://www.sanskritiias.com/uploaded_files/images//pmfby.jpg" class="card-img-top" alt="PMFBY">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">PMFBY (Pradhan Mantri Fasal Bima Yojana)</h5>
+                    <p class="card-text">Provides crop insurance to protect farmers from losses due to natural calamities, pests, and diseases.</p>
+                    <a href="https://pmfby.gov.in/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row d-flex">
+        <!-- Rashtriya Krishi Vikas Yojana (RKVY) -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+                <img src="https://skilleducationhub.com/wp-content/uploads/2024/02/PMKVY-1-1.jpg" class="card-img-top" alt="RKVY">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">Rashtriya Krishi Vikas Yojana (RKVY)</h5>
+                    <p class="card-text">Encourages states to implement projects that boost agricultural productivity and modernization.</p>
+                    <a href="https://rkvy.nic.in/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- National Agriculture Market (eNAM) -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+                <img src="https://enam.gov.in/web/Slider_gallary/1/Onion-Trade.png" class="card-img-top" alt="eNAM">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">National Agriculture Market (eNAM)</h5>
+                    <p class="card-text">An online trading platform that helps farmers get better prices for their produce by connecting them to buyers across India.</p>
+                    <a href="https://enam.gov.in/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Visit eNAM</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kisan Credit Card (KCC) -->
+        <div class="col-md-4 d-flex">
+            <div class="card shadow-sm mb-4 w-100 d-flex flex-column" style="min-height: 400px;">
+                <img src="https://etimg.etb2bimg.com/thumb/msid-99315879,width-1200,height-900,resizemode-4/.jpg" class="card-img-top" alt="KCC">
+                <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                    <h5 class="card-title">Kisan Credit Card (KCC)</h5>
+                    <p class="card-text">Provides short-term credit support to farmers for meeting their agricultural and related expenses.</p>
+                    <a href="https://www.nabard.org/" class="btn" style="background-color: #8CE17D; color: white; border: none; margin-top: auto;" target="_blank">Apply for KCC</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% endblock %}

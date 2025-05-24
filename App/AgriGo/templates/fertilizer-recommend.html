@@ -1,0 +1,103 @@
+{% extends "index.html" %}
+{% block content %}
+
+
+
+<!-- Background Video Section -->
+ <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+<source src="{{ url_for('static', filename='vids/ferti.mp4') }}" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<div class="container pt-5">
+    <h1 class="text-center" style="#8CE17D">Fertilizer Recommendation</h1>
+    
+</div>
+
+
+<div class="container">
+
+
+    <div class="col-md-4 col-md-offset-4" style="float: right; margin-top: 5%; margin-right: 10%;margin-bottom: 5%;">
+        <img src="./static/images/hand.jpg" width="500" height="333">
+    </div>
+
+    <form action="/fertilizer-recommendation" method="POST" style="margin-top: -40px;">
+        <div class="col-md-4 col-md-offset-4">
+            <label for="temperature">Soil Temperature(in C):</label>
+            <input class="form-control" type="number" min="0" step="any" id="temperature" name="temperature"
+                required="required" placeholder="Enter soil temperature">
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="humidity">Soil Humidity(in %) :</label>
+            <input class="form-control" type="number" min="0" step="any" id="humidity" name="humidity"
+                required="required" placeholder="enter soil humidity level">
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="moisture">Soil Moisture(in %) :</label>
+            <input class="form-control" type="number" min="0" step="any" id="moisture" name="moisture"
+                required="required" placeholder="enter soil moisture level">
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="N">Amount of Azote(in KG) :</label>
+            <input class="form-control" type="number" min="0" required="required" name="N" ,
+                placeholder="enter amount of azote">
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="P">Amount of Phosphorous(in KG):</label>
+            <input class="form-control" type="number" min="0" id="P" name="P" required="required"
+                placeholder="enter amount of phosphore">
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="K">Amount of Potassium(in KG) :</label>
+            <input class="form-control" type="number" min="0" id="K" name="K" required="required"
+                placeholder="enter amount of potassium">
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="soil">Soil Type :</label>
+            <select name="soil" class="form-control" placeholder="enter your soil type" required="required">
+                {% for i, soil in soil_types %}
+                <option type="text" value="{{i}}" data-show=".{{soil}}">{{soil}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+
+            <label for="crop">Crop Type :</label>
+            <select name="crop" class="form-control" placeholder="enter crop type" required="required">
+                {% for i, crop in crop_types %}
+                <option type="text" value="{{i}}" data-show=".{{crop}}">{{crop}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+      
+
+
+        <div class="text-center" style="padding-top: 5%">
+            <button type="submit" class="btn btn-success" value="submit">predict</button>
+        </div>
+      
+
+    </form>
+
+
+
+</div>
+
+
+
+
+{% endblock %}
